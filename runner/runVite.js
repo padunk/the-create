@@ -1,4 +1,4 @@
-import { DEFAULT_VITE_TEMPLATE, VITE_TEMPLATES } from './constants/index.js'
+import { DEFAULT_VITE_TEMPLATE, VITE_TEMPLATES } from '../constants/index.js'
 
 import chalk from 'chalk'
 import { execa } from 'execa'

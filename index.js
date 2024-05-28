@@ -1,5 +1,7 @@
 'use strict'
 
+import * as runner from './runner/index.js'
+
 import {
   ALIASES,
   DEFAULT_APP_NAME,
@@ -14,7 +16,6 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
 import inquirer from 'inquirer'
-import { runVite } from './runVite.js'
 
 // Get the filename of the current module
 export const __filename = fileURLToPath(import.meta.url)
@@ -32,9 +33,6 @@ function parseArgumentsIntoOptions(rawArgs) {
     {
       ...GENERAL_FLAG,
       ...ALIASES,
-      '--pm': String,
-      '--fw': String,
-      '--template': String,
     },
     {
       argv: rawArgs.slice(2),
@@ -44,8 +42,8 @@ function parseArgumentsIntoOptions(rawArgs) {
     directoryName: args._[0],
     help: args['--help'] || false,
     version: args['--version'] || false,
-    pm: args['--pm'],
-    fw: args['--fw'],
+    pm: args['--package-manager'] || args['--pm'],
+    fw: args['--framework'] || args['--fw'],
     template: args['--template'],
   }
 }
@@ -70,7 +68,18 @@ export async function cli(args) {
     return
   }
 
-  if (!options.directoryName) {
+  if (!options.pm) {
+    options.pm = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'pm',
+        message: chalk.greenBright.bold('Choose your package manager'),
+        choices: Object.values(PACKAGE_MANAGER),
+      },
+    ])
+  }
+
+  if (options.pm === 'vite' && !options.directoryName) {
     options.directoryName = await inquirer.prompt([
       {
         type: 'input',
@@ -81,20 +90,18 @@ export async function cli(args) {
     ])
   }
 
-  if (!options.pm) {
-    options.pm = await inquirer.prompt([
-      {
-        type: 'list',
-        name: 'template',
-        message: chalk.greenBright.bold('Choose your package manager'),
-        choices: Object.values(PACKAGE_MANAGER),
-      },
-    ])
-  }
-
-  if (options.fw === 'vite') {
-    await runVite(options.pm, options)
-    return
+  switch (options.fw) {
+    case 'astro':
+      await runner.runAstro(options.pm, options)
+      return
+    case 'next':
+      await runner.runNext(options.pm, options)
+      return
+    case 'vite':
+      await runner.runVite(options.pm, options)
+      return
+    default:
+      return
   }
 
   return

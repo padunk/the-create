@@ -1,0 +1,6 @@
+{
+  "source": {
+    "include": ["index.js", "type.js", "runner/*.js", "constants/*.js", "utils/*.js"],
+    "exclude": ["bin/*"]
+  }
+}

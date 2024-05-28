@@ -19,7 +19,7 @@
  * @property {StringOrBoolean} directoryName - app directory name
  * @property {StringOrBoolean} help - help flag
  * @property {StringOrBoolean} version - version flag
- * @property {ViteTemplates} template - Vite template
+ * @property {ViteTemplates | string} template - Vite template
  * @property {PackageManager} pm - package manager flag
  * @property {Framework} fw - framework flag
  */

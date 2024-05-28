@@ -2,46 +2,46 @@ export const GENERAL_FLAG = {
   '--git': Boolean,
   '--help': Boolean,
   '--version': Boolean,
+  '--package-manager': String,
+  '--framework': String,
+  '--template': String,
 }
 
 export const ALIASES = {
   '-g': '--git',
   '-h': '--help',
   '-v': '--version',
+  '--fw': '--framework',
+  '--pm': '--package-manager',
 }
 
 export const HELP_MANUAL = `
-thecreate --help
-thecreate --version
-thecreate <app name> <general flag> --pm=<package manager> --fw=<framework> --template=<vite template>
+usage: thecreate [-h | --help] [-v | --version] [<app name>] [-g | --git] 
+       [--package-manager=<package manager>] [--framework=<framework>] [--template=<template name>]
 
-[general flag]
---help    : show help manual
---version : show THE-CREATE version
+general flag:
+  git       : initialize git in your app
 
-[general flag]
---git     : initialize git in your app
+package manager:
+  bun       : Run with bun
+  npm       : Run with npm
+  pnpm      : Run with pnpm
+  yarn      : Run with yarn
 
-[package manager]
-bun       : 'run with bun',
-npm       : 'run with npm',
-pnpm      : 'run with pnpm',
-yarn      : 'run with yarn',
-
-[framework/library]
-angular   : create Angular project
-astro     : create Astro project
-million   : create Million project
-next      : create Next project
-nuxt      : create Nuxt project
-preact    : create Preact project
-qwik      : create Qwik project
-redwood   : create Redwood project
-remix     : create Remix project
-solid     : create SolidStart project
-svelte    : create Svelte project
-vite      : create Vite based project
-vue       : create Vue project
+framework/library: make sure you have any global packages/cli:
+  angular   : Create Angular project
+  astro     : Create Astro project
+  million   : Integrate MillionJS to your project
+  next      : Create Next project
+  nuxt      : Create Nuxt project
+  preact    : Create Preact project
+  qwik      : Create Qwik project
+  redwood   : Create Redwood project
+  remix     : Create Remix project
+  solid     : Create SolidStart project
+  svelte    : Create Svelte project
+  vite      : Create Vite based project
+  vue       : Create Vue project
 
 `
 // [vite custom template]
