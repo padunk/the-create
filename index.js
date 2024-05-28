@@ -69,7 +69,7 @@ export async function cli(args) {
   }
 
   if (!options.pm) {
-    options.pm = await inquirer.prompt([
+    const result = await inquirer.prompt([
       {
         type: 'list',
         name: 'pm',
@@ -77,17 +77,21 @@ export async function cli(args) {
         choices: Object.values(PACKAGE_MANAGER),
       },
     ])
+    options.pm = result.pm
   }
 
-  if (options.pm === 'vite' && !options.directoryName) {
-    options.directoryName = await inquirer.prompt([
-      {
-        type: 'input',
-        name: 'directoryName',
-        message: chalk.cyanBright.bold("What's your app/project name?"),
-        default: DEFAULT_APP_NAME,
-      },
-    ])
+  if (options.fw === 'vite' || options.fw === 'nuxt') {
+    if (!options.directoryName) {
+      const result = await inquirer.prompt([
+        {
+          type: 'input',
+          name: 'directoryName',
+          message: chalk.cyanBright.bold("What's your app/project name?"),
+          default: DEFAULT_APP_NAME,
+        },
+      ])
+      options.directoryName = result.directoryName
+    }
   }
 
   switch (options.fw) {
@@ -96,6 +100,9 @@ export async function cli(args) {
       return
     case 'next':
       await runner.runNext(options.pm, options)
+      return
+    case 'nuxt':
+      await runner.runNuxt(options.pm, options)
       return
     case 'vite':
       await runner.runVite(options.pm, options)
