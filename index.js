@@ -4,7 +4,7 @@ import * as runner from './runner/index.js'
 
 import {
   ALIASES,
-  DEFAULT_APP_NAME,
+  FRAMEWORK,
   GENERAL_FLAG,
   HELP_MANUAL,
   PACKAGE_MANAGER,
@@ -80,18 +80,16 @@ export async function cli(args) {
     options.pm = result.pm
   }
 
-  if (options.fw === 'vite' || options.fw === 'nuxt') {
-    if (!options.directoryName) {
-      const result = await inquirer.prompt([
-        {
-          type: 'input',
-          name: 'directoryName',
-          message: chalk.cyanBright.bold("What's your app/project name?"),
-          default: DEFAULT_APP_NAME,
-        },
-      ])
-      options.directoryName = result.directoryName
-    }
+  if (!options.fw) {
+    const result = await inquirer.prompt([
+      {
+        type: 'list',
+        name: 'fw',
+        message: chalk.blueBright.bold('Choose your framework'),
+        choices: Object.values(FRAMEWORK),
+      },
+    ])
+    options.fw = result.fw
   }
 
   switch (options.fw) {
@@ -103,6 +101,9 @@ export async function cli(args) {
       return
     case 'nuxt':
       await runner.runNuxt(options.pm, options)
+      return
+    case 'preact':
+      await runner.runPreact(options.pm, options)
       return
     case 'vite':
       await runner.runVite(options.pm, options)

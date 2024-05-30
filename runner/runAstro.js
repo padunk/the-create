@@ -1,10 +1,12 @@
+'use strict'
+
 import { execSync } from 'child_process'
 
 /**
  * Run Astro based project
- * @param {PackageManager} packageManager
- * @param {Options} options
- * @returns {Promise<void>}
+ * @param {PackageManager} packageManager - package manager
+ * @param {Options} options - Options object
+ * @returns {void}
  */
 export async function runAstro(packageManager, options) {
   let command = `${packageManager} create astro`

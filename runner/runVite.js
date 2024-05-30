@@ -1,38 +1,27 @@
-import { DEFAULT_VITE_TEMPLATE, VITE_TEMPLATES } from '../constants/index.js'
+'use strict'
 
-import chalk from 'chalk'
+import { DEFAULT_VITE_TEMPLATE, VITE_TEMPLATES } from '../constants/index.js'
+import { checkDirectoryName, checkTemplate } from '../utils/index.js'
+
 import { execa } from 'execa'
-import inquirer from 'inquirer'
 
 /**
  * Check vite template arguments
- * @param {Options} options
+ * @param {Options} options - Options object
  * @returns {Options}
  */
 async function checkViteOptions(options) {
-  let answers = { template: options.template }
-  if (!options.template) {
-    answers = await inquirer.prompt([
-      {
-        type: 'list',
-        name: 'template',
-        message: chalk.yellow.bold('Choose your template'),
-        choices: VITE_TEMPLATES,
-        default: DEFAULT_VITE_TEMPLATE,
-      },
-    ])
-  }
+  options = await checkDirectoryName(options)
+  options = await checkTemplate(options, VITE_TEMPLATES, DEFAULT_VITE_TEMPLATE)
 
-  return {
-    ...options,
-    ...answers,
-  }
+  return options
 }
 
 /**
  * Run Vite based project
- * @param {PackageManager} packageManager
- * @param {Options} opts
+ * @param {PackageManager} packageManager - package manager
+ * @param {Options} opts - Options object
+ * @returns {void}
  */
 export async function runVite(packageManager, opts) {
   const options = await checkViteOptions(opts)
