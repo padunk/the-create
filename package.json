@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -u tdd",
+    "create-jsdoc": "jsdoc -c conf.json",
     "link": "npm link",
     "unlink": "npm unlink -g @rustyrush/the-create"
   },
