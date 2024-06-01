@@ -90,7 +90,7 @@ export const FRAMEWORK = {
   '--qwik': 'qwik',
   '--redwood': 'redwood',
   '--remix': 'remix',
-  '--solidStart': 'solidStart',
-  '--svelteKit': 'svelteKit',
+  '--solidStart': 'solidstart',
+  '--svelteKit': 'sveltekit',
   '--vite': 'vite',
 }

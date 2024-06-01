@@ -11,7 +11,7 @@
  */
 
 /**
- * @typedef {'analog' | 'astro' | 'million' | 'next' | 'nuxt' | 'parcel' | 'preact' | 'qwik' | 'redwood' | 'remix' | 'solidStart' | 'svelteKit' | 'vite' } Framework
+ * @typedef {'analog' | 'astro' | 'million' | 'next' | 'nuxt' | 'parcel' | 'preact' | 'qwik' | 'redwood' | 'remix' | 'solidstart' | 'sveltekit' | 'vite' } Framework
  */
 
 /**

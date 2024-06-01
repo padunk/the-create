@@ -85,7 +85,7 @@ export async function cli(args) {
     options.fw = result.fw
   }
 
-  switch (options.fw) {
+  switch (options.fw.trim().toLowerCase()) {
     case 'analog':
       await runner.runAnalog(options)
       return
@@ -110,10 +110,10 @@ export async function cli(args) {
     case 'remix':
       await runner.runRemix(options)
       return
-    case 'solidStart':
+    case 'solidstart':
       await runner.runSolidStart(options)
       return
-    case 'svelteKit':
+    case 'sveltekit':
       await runner.runSvelteKit(options)
       return
     case 'vite':
