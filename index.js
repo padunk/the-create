@@ -107,6 +107,9 @@ export async function cli(args) {
     case 'remix':
       await runner.runRemix(options)
       return
+    case 'solidStart':
+      await runner.runSolidStart(options)
+      return
     case 'vite':
       await runner.runVite(options)
       return
