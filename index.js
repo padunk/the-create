@@ -98,6 +98,9 @@ export async function cli(args) {
     case 'preact':
       await runner.runPreact(options.pm, options)
       return
+    case 'qwik':
+      await runner.runQwik(options.pm, options)
+      return
     case 'vite':
       await runner.runVite(options.pm, options)
       return
