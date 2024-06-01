@@ -45,6 +45,24 @@ vim .
 
 ```
 
+## Supported Framework/Library
+
+- Analog: `--fw=analog`
+- Astro: `--fw=astro`
+- Next: `--fw=next`
+- Nuxt: `--fw=nuxt`
+- Preact: `--fw=preact`
+- Qwik: `--fw=qwik`
+- Redwood: `--fw=redwood`
+- Remix: `--fw=remix`
+- SolidStart: `--fw=solidstart`
+- SvelteKit: `--fw=sveltekit`
+- Vite: `--fw=vite`
+
+## Changelog
+
+[Changelog](https://github.com/padunk/the-create/blob/main/CHANGELOG.md)
+
 ## License
 
 [MIT](https://github.com/padunk/the-create/blob/master/LICENSE)
