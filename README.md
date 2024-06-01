@@ -31,9 +31,9 @@ Creating Vite based project with Bun
 ```bash
 thecreate my-app --pm=bun --fw=vite
 # OR
-thecreate my-app --pm bun --fw=vite
+the-create my-app --pm bun --fw vite
 # OR
-thecreate my-app --pm bun --fw vite
+thecreate --fw=vite
 
 # RustyRush creating your app...
 
