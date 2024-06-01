@@ -29,7 +29,7 @@ package manager:
   yarn        : Run with yarn
 
 framework/library: make sure you have any global packages/cli:
-  angular     : Create Angular project
+  analog      : Create Analog project
   astro       : Create Astro project
   million     : Integrate MillionJS to your project
   next        : Create Next project

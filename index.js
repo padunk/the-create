@@ -86,6 +86,9 @@ export async function cli(args) {
   }
 
   switch (options.fw) {
+    case 'analog':
+      await runner.runAnalog(options)
+      return
     case 'astro':
       await runner.runAstro(options)
       return

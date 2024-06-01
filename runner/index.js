@@ -1,3 +1,4 @@
+import { runAnalog } from './runAnalog.js'
 import { runAstro } from './runAstro.js'
 import { runNext } from './runNext.js'
 import { runNuxt } from './runNuxt.js'
@@ -10,6 +11,7 @@ import { runSvelteKit } from './runSvelteKit.js'
 import { runVite } from './runVite.js'
 
 export {
+  runAnalog,
   runAstro,
   runNext,
   runNuxt,
