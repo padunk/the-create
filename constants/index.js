@@ -20,28 +20,27 @@ usage: thecreate [-h | --help] [-v | --version] [<app name>] [-g | --git]
        [--package-manager=<package manager>] [--framework=<framework>] [--template=<template name>]
 
 general flag:
-  git       : initialize git in your app
+  git         : initialize git in your app
 
 package manager:
-  bun       : Run with bun
-  npm       : Run with npm
-  pnpm      : Run with pnpm
-  yarn      : Run with yarn
+  bun         : Run with bun
+  npm         : Run with npm
+  pnpm        : Run with pnpm
+  yarn        : Run with yarn
 
 framework/library: make sure you have any global packages/cli:
-  angular   : Create Angular project
-  astro     : Create Astro project
-  million   : Integrate MillionJS to your project
-  next      : Create Next project
-  nuxt      : Create Nuxt project
-  preact    : Create Preact project
-  qwik      : Create Qwik project
-  redwood   : Create Redwood project
-  remix     : Create Remix project
-  solid     : Create SolidStart project
-  svelte    : Create Svelte project
-  vite      : Create Vite based project
-  vue       : Create Vue project
+  angular     : Create Angular project
+  astro       : Create Astro project
+  million     : Integrate MillionJS to your project
+  next        : Create Next project
+  nuxt        : Create Nuxt project
+  preact      : Create Preact project
+  qwik        : Create Qwik project
+  redwood     : Create Redwood project
+  remix       : Create Remix project
+  solidStart  : Create SolidStart project
+  svelteKit   : Create SvelteKit project
+  vite        : Create Vite based project
 
 `
 // [vite custom template]
@@ -77,7 +76,7 @@ export const DEFAULT_VITE_TEMPLATE = 'vanilla'
 export const DEFAULT_APP_NAME = 'my-app'
 
 export const FRAMEWORK = {
-  '--angular': 'angular',
+  '--analog': 'analog',
   '--astro': 'astro',
   '--million': 'million',
   '--next': 'next',
@@ -86,8 +85,7 @@ export const FRAMEWORK = {
   '--qwik': 'qwik',
   '--redwood': 'redwood',
   '--remix': 'remix',
-  '--solid': 'solid',
-  '--svelte': 'svelte',
+  '--solidStart': 'solidStart',
+  '--svelteKit': 'svelteKit',
   '--vite': 'vite',
-  '--vue': 'vue',
 }
