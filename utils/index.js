@@ -70,7 +70,7 @@ export async function missingOptions(options) {
 /**
  * function to check if directoryName exist in options
  * @param {Options} options - Options object
- * @returns {Options}
+ * @returns {Promise<Options>}
  */
 export async function checkDirectoryName(options) {
   if (!options.directoryName) {
@@ -92,7 +92,7 @@ export async function checkDirectoryName(options) {
  * @param {Options} options - Options object
  * @param {any} list - template list
  * @param {any} defaultList - template default list
- * @returns {Options}
+ * @returns {Promise<Options>}
  */
 export async function checkTemplate(options, list, defaultList) {
   if (!options.template) {

@@ -87,25 +87,25 @@ export async function cli(args) {
 
   switch (options.fw) {
     case 'astro':
-      await runner.runAstro(options.pm, options)
+      await runner.runAstro(options)
       return
     case 'next':
-      await runner.runNext(options.pm, options)
+      await runner.runNext(options)
       return
     case 'nuxt':
-      await runner.runNuxt(options.pm, options)
+      await runner.runNuxt(options)
       return
     case 'preact':
-      await runner.runPreact(options.pm, options)
+      await runner.runPreact(options)
       return
     case 'qwik':
-      await runner.runQwik(options.pm, options)
+      await runner.runQwik(options)
       return
     case 'redwood':
       await runner.runRedwood(options)
       return
     case 'vite':
-      await runner.runVite(options.pm, options)
+      await runner.runVite(options)
       return
     default:
       return

@@ -5,16 +5,15 @@ import { execSync } from 'child_process'
 
 /**
  * Run NuxtJS based project
- * @param {PackageManager} packageManager - package manager
  * @param {Options} options - Options object
  * @returns {Promise<void>}
  */
-export async function runNuxt(packageManager, options) {
+export async function runNuxt(options) {
   options = checkDirectoryName(options)
 
   let command = `nuxi@latest init ${options.directoryName}`
 
-  switch (packageManager) {
+  switch (options.pm) {
     case 'pnpm':
       command = 'pnpm dlx ' + command
       break

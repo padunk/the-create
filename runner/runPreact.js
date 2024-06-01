@@ -7,11 +7,10 @@ import { runVite } from './runVite.js'
 
 /**
  * Run PreactJS based project
- * @param {PackageManager} packageManager
  * @param {Options} options
  * @returns {Promise<undefined | void>}
  */
-export async function runPreact(packageManager, options) {
+export async function runPreact(options) {
   const isRunWithVite = await inquirer.prompt([
     {
       type: 'confirm',
@@ -22,7 +21,7 @@ export async function runPreact(packageManager, options) {
   ])
 
   if (isRunWithVite.ok) {
-    runVite(packageManager, options)
+    runVite(options)
     return
   }
   const command = `npm init preact`

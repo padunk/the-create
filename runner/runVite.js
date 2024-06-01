@@ -8,7 +8,7 @@ import { execa } from 'execa'
 /**
  * Check vite template arguments
  * @param {Options} options - Options object
- * @returns {Options}
+ * @returns {Promise<Options>}
  */
 async function checkViteOptions(options) {
   options = await checkDirectoryName(options)
@@ -19,16 +19,15 @@ async function checkViteOptions(options) {
 
 /**
  * Run Vite based project
- * @param {PackageManager} packageManager - package manager
  * @param {Options} opts - Options object
  * @returns {Promise<void>}
  */
-export async function runVite(packageManager, opts) {
+export async function runVite(opts) {
   const options = await checkViteOptions(opts)
 
-  if (packageManager === 'npm') {
+  if (options.pm === 'npm') {
     // npm 7+, extra double dash is needed:
-    await execa(packageManager, [
+    await execa(options.pm, [
       'create',
       'vite@latest',
       options.directoryName,
@@ -37,7 +36,7 @@ export async function runVite(packageManager, opts) {
       options.template,
     ])
   } else {
-    await execa(packageManager, [
+    await execa(options.pm, [
       'create',
       'vite',
       options.directoryName,
