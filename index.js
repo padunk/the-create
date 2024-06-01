@@ -101,6 +101,9 @@ export async function cli(args) {
     case 'qwik':
       await runner.runQwik(options.pm, options)
       return
+    case 'redwood':
+      await runner.runRedwood(options)
+      return
     case 'vite':
       await runner.runVite(options.pm, options)
       return

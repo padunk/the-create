@@ -3,6 +3,7 @@ import { runNext } from './runNext.js'
 import { runNuxt } from './runNuxt.js'
 import { runPreact } from './runPreact.js'
 import { runQwik } from './runQwik.js'
+import { runRedwood } from './runRedwood.js'
 import { runVite } from './runVite.js'
 
-export { runAstro, runNext, runNuxt, runPreact, runQwik, runVite }
+export { runAstro, runNext, runNuxt, runPreact, runQwik, runRedwood, runVite }
