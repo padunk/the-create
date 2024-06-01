@@ -104,6 +104,9 @@ export async function cli(args) {
     case 'redwood':
       await runner.runRedwood(options)
       return
+    case 'remix':
+      await runner.runRemix(options)
+      return
     case 'vite':
       await runner.runVite(options)
       return
