@@ -1,3 +1,5 @@
+import chalk from 'chalk'
+
 export const GENERAL_FLAG = {
   '--git': Boolean,
   '--help': Boolean,
@@ -19,8 +21,10 @@ export const HELP_MANUAL = `
 usage: thecreate [-h | --help] [-v | --version] [<app name>] [-g | --git] 
        [--package-manager=<package manager>] [--framework=<framework>] [--template=<template name>]
 
+example: ${chalk.bgBlack.yellowBright('thecreate --fw=vite')}
+
 general flag:
-  git         : initialize git in your app
+  git         : initialize git in your app ${chalk.bgMagenta('<COMING SOON!>')}
 
 package manager:
   bun         : Run with bun
@@ -28,10 +32,11 @@ package manager:
   pnpm        : Run with pnpm
   yarn        : Run with yarn
 
-framework/library: make sure you have any global packages/cli:
+framework/library: 
+(make sure you have any global packages/cli)
   analog      : Create Analog project
   astro       : Create Astro project
-  million     : Integrate MillionJS to your project
+  million     : Integrate MillionLint to your project ${chalk.bgMagenta('<COMING SOON!>')}
   next        : Create Next project
   nuxt        : Create Nuxt project
   preact      : Create Preact project
