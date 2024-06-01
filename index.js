@@ -47,7 +47,7 @@ function parseArgumentsIntoOptions(rawArgs) {
     directoryName: args._[0],
     help: args['--help'] || false,
     version: args['--version'] || false,
-    pm: args['--package-manager'] || args['--pm'],
+    pm: args['--package-manager'] || args['--pm'] || 'npm',
     fw: args['--framework'] || args['--fw'],
     template: args['--template'],
   }
@@ -71,18 +71,6 @@ export async function cli(args) {
     })
     console.log(JSON.parse(pkgJSON).version)
     return
-  }
-
-  if (!options.pm) {
-    const result = await inquirer.prompt([
-      {
-        type: 'list',
-        name: 'pm',
-        message: chalk.greenBright.bold('Choose your package manager'),
-        choices: Object.values(PACKAGE_MANAGER),
-      },
-    ])
-    options.pm = result.pm
   }
 
   if (!options.fw) {
