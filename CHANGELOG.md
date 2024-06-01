@@ -1,3 +1,11 @@
+## 1.0.3 (1 June 2024)
+
+### Patch
+
+- Update readme
+- Update help instruction
+- Fix uppercase
+
 ## 1.0.2 (1 June 2024)
 
 ### Patch
