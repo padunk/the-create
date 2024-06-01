@@ -110,10 +110,12 @@ export async function cli(args) {
     case 'solidStart':
       await runner.runSolidStart(options)
       return
-    case 'vite':
-      await runner.runVite(options)
+    case 'svelteKit':
+      await runner.runSvelteKit(options)
       return
+    case 'vite':
     default:
+      await runner.runVite(options)
       return
   }
 

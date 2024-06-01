@@ -6,6 +6,7 @@ import { runQwik } from './runQwik.js'
 import { runRedwood } from './runRedwood.js'
 import { runRemix } from './runRemix.js'
 import { runSolidStart } from './runSolidStart.js'
+import { runSvelteKit } from './runSvelteKit.js'
 import { runVite } from './runVite.js'
 
 export {
@@ -17,5 +18,6 @@ export {
   runRedwood,
   runRemix,
   runSolidStart,
+  runSvelteKit,
   runVite,
 }
