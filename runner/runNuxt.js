@@ -9,7 +9,7 @@ import { execSync } from 'child_process'
  * @returns {Promise<void>}
  */
 export async function runNuxt(options) {
-  options = checkDirectoryName(options)
+  options = await checkDirectoryName(options)
 
   let command = `nuxi@latest init ${options.directoryName}`
 
