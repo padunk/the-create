@@ -11,7 +11,7 @@ import { execSync } from 'child_process'
 export async function runSvelteKit(options) {
   options = await checkDirectoryName(options)
 
-  const command = `${options.pm} create svelte@latest`
+  const command = `${options.pm} create svelte@latest ${options.directoryName}`
 
   execSync(command, { stdio: 'inherit' })
 }

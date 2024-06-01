@@ -78,7 +78,7 @@ export async function checkDirectoryName(options) {
       {
         type: 'input',
         name: 'directoryName',
-        message: chalk.cyanBright.bold("What's your app/project name?"),
+        message: chalk.yellowBright.bold("What's your app/project name?"),
         default: DEFAULT_APP_NAME,
       },
     ])
