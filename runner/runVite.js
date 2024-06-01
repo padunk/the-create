@@ -21,7 +21,7 @@ async function checkViteOptions(options) {
  * Run Vite based project
  * @param {PackageManager} packageManager - package manager
  * @param {Options} opts - Options object
- * @returns {void}
+ * @returns {Promise<void>}
  */
 export async function runVite(packageManager, opts) {
   const options = await checkViteOptions(opts)

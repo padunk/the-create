@@ -6,7 +6,7 @@ import { execSync } from 'child_process'
  * Run Astro based project
  * @param {PackageManager} packageManager - package manager
  * @param {Options} options - Options object
- * @returns {void}
+ * @returns {Promise<void>}
  */
 export async function runAstro(packageManager, options) {
   let command = `${packageManager} create astro`

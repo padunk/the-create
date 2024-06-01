@@ -7,6 +7,7 @@ import { execSync } from 'child_process'
  * Run NuxtJS based project
  * @param {PackageManager} packageManager - package manager
  * @param {Options} options - Options object
+ * @returns {Promise<void>}
  */
 export async function runNuxt(packageManager, options) {
   options = checkDirectoryName(options)

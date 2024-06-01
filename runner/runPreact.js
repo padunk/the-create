@@ -9,7 +9,7 @@ import { runVite } from './runVite.js'
  * Run PreactJS based project
  * @param {PackageManager} packageManager
  * @param {Options} options
- * @returns {undefined | void}
+ * @returns {Promise<undefined | void>}
  */
 export async function runPreact(packageManager, options) {
   const isRunWithVite = await inquirer.prompt([
