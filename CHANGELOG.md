@@ -1,3 +1,13 @@
+## 1.0.4 (6 June 2024)
+
+### Patch
+
+- Add EpicStack
+- Update Readme
+- Refactor runAstro
+- Fix import type
+- Add keywords
+
 ## 1.0.3 (1 June 2024)
 
 ### Patch

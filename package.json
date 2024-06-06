@@ -1,6 +1,6 @@
 {
   "name": "@rustyrush/the-create",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "One create to rule them all",
   "type": "module",
   "main": "index.js",
@@ -16,8 +16,13 @@
     "url": "git+https://github.com/padunk/the-create.git"
   },
   "keywords": [
+    "create",
     "create app",
-    "create all app"
+    "create all app",
+    "create new app",
+    "react",
+    "vue",
+    "vite"
   ],
   "author": "Abraham Anak Agung <abraham.agel@gmail.com> (https://anakagung.com/)",
   "license": "MIT",
