@@ -15,11 +15,10 @@ export async function runAstro(options) {
     if (options.template) {
       command = `${command} -- --template ${options.template}`
     }
-    execSync(command, { stdio: 'inherit' })
   } else {
     if (options.template) {
       command = `${command} --template ${options.template}`
     }
-    execSync(command, { stdio: 'inherit' })
   }
+  execSync(command, { stdio: 'inherit' })
 }
