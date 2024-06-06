@@ -1,19 +1,10 @@
 'use strict'
 
-/**
- * @file index.js
- * @requires ./type.js
- */
+/** @type {import('./type.js')}  */
 
 import * as runner from './runner/index.js'
 
-import {
-  ALIASES,
-  FRAMEWORK,
-  GENERAL_FLAG,
-  HELP_MANUAL,
-  PACKAGE_MANAGER,
-} from './constants/index.js'
+import { ALIASES, FRAMEWORK, GENERAL_FLAG, HELP_MANUAL } from './constants/index.js'
 import path, { dirname } from 'path'
 
 import arg from 'arg'
@@ -91,6 +82,9 @@ export async function cli(args) {
       return
     case 'astro':
       await runner.runAstro(options)
+      return
+    case 'epic':
+      await runner.runEpic(options)
       return
     case 'next':
       await runner.runNext(options)

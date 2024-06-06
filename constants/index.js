@@ -36,6 +36,7 @@ framework/library:
 (make sure you have any global packages/cli)
   analog      : Create Analog project
   astro       : Create Astro project
+  epicStack   : Create EpicStack project
   million     : Integrate MillionLint to your project ${chalk.bgMagenta('<COMING SOON!>')}
   next        : Create Next project
   nuxt        : Create Nuxt project
@@ -83,6 +84,7 @@ export const DEFAULT_APP_NAME = 'my-app'
 export const FRAMEWORK = {
   '--analog': 'analog',
   '--astro': 'astro',
+  '--epic': 'epic',
   '--million': 'million',
   '--next': 'next',
   '--nuxt': 'nuxt',
