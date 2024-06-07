@@ -1,3 +1,10 @@
+## 1.0.5 (7 June 2024)
+
+### Patch
+
+- Add UmiJS
+- Add utils function
+
 ## 1.0.4 (6 June 2024)
 
 ### Patch

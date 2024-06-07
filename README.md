@@ -49,6 +49,7 @@ vim .
 
 - Analog: `--fw=analog`
 - Astro: `--fw=astro`
+- Epic: `--fw=epic`
 - Next: `--fw=next`
 - Nuxt: `--fw=nuxt`
 - Preact: `--fw=preact`
@@ -57,6 +58,7 @@ vim .
 - Remix: `--fw=remix`
 - SolidStart: `--fw=solidstart`
 - SvelteKit: `--fw=sveltekit`
+- Umi: `--fw=umi`
 - Vite: `--fw=vite`
 
 ## Changelog
