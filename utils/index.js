@@ -2,6 +2,7 @@
 
 import { DEFAULT_APP_NAME } from '../constants/index.js'
 import chalk from 'chalk'
+import { execa } from 'execa'
 import inquirer from 'inquirer'
 
 export async function missingOptions(options) {
@@ -108,4 +109,40 @@ export async function checkTemplate(options, list, defaultList) {
     options.template = answers.template
   }
   return options
+}
+
+/**
+ * Function to check if NodeJS is installed and return the version
+ * @returns {Promise<string>} return format 1.xx.xx
+ */
+export async function getNodeVersion() {
+  return await getVersion('node')
+}
+
+/**
+ * Function to check if an app is installed and return the version
+ * @param {string} app
+ * @returns {Promise<string>} return format 1.xx.xx
+ */
+export async function getVersion(app) {
+  const { stdout } = await execa`${app} -v`.catch((error) => {
+    if (error) {
+      console.error(`Please install ${app}`)
+      process.exit(1)
+    }
+  })
+  const currentVersion = stdout.trim().replace('v', '')
+  console.log(app, 'version :>> ', currentVersion)
+  return currentVersion
+}
+
+/**
+ * Function to check is current node version greater than or equal to minimum version
+ * @param {number} minVersion minimum version required
+ * @returns {Promise<boolean>}
+ */
+export async function isNodeVersionGte(minVersion) {
+  let currentNodeVersion = await getNodeVersion()
+  currentNodeVersion = parseInt(currentNodeVersion, 10)
+  return currentNodeVersion >= minVersion
 }

@@ -1,9 +1,8 @@
 'use strict'
 
-import chalk from 'chalk'
-import { checkDirectoryName } from '../utils/index.js'
+import { checkDirectoryName, getVersion, isNodeVersionGte } from '../utils/index.js'
+
 import { execSync } from 'child_process'
-import inquirer from 'inquirer'
 
 /**
  * Run RedwoodJS based project
@@ -11,36 +10,22 @@ import inquirer from 'inquirer'
  * @returns {Promise<undefined | void>}
  */
 export async function runRedwood(options) {
-  const opts = await checkDirectoryName(options)
-  let answers = { ok: false }
-
-  if (options.pm !== 'yarn') {
-    answers = await inquirer.prompt([
-      {
-        type: 'confirm',
-        name: 'ok',
-        message: chalk.cyanBright.bold('Do you have YARN 1.22.22?'),
-        default: false,
-      },
-    ])
-    if (!answers.ok) {
-      console.log('Please install YARN: npm i -g yarn')
-      return
-    }
-  }
-  answers = await inquirer.prompt([
-    {
-      type: 'confirm',
-      name: 'ok',
-      message: chalk.redBright.bold('Do you have NPM >= 20?'),
-      default: false,
-    },
-  ])
-  if (!answers.ok) {
-    console.log('Please upgrade NPM')
+  const packageManagerRequired = 'yarn'
+  const currentYarnVersion = await getVersion(packageManagerRequired)
+  const minYarnVersion = '1.22.22'
+  if (currentYarnVersion !== minYarnVersion) {
+    console.log(`Please install ${packageManagerRequired} v.${minPackageManagerVersion}`)
     return
   }
 
+  const minNodeVersion = 20
+  const isNodeVersionOk = await isNodeVersionGte(minNodeVersion)
+  if (!isNodeVersionOk) {
+    console.log(`Please upgrade Node to v.${minNodeVersion}`)
+    return
+  }
+
+  const opts = await checkDirectoryName(options)
   const command = `yarn create redwood-app ${opts.directoryName}`
   execSync(command, { stdio: 'inherit' })
 }
