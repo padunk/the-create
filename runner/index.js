@@ -9,6 +9,7 @@ import { runRedwood } from './runRedwood.js'
 import { runRemix } from './runRemix.js'
 import { runSolidStart } from './runSolidStart.js'
 import { runSvelteKit } from './runSvelteKit.js'
+import { runUmi } from './runUmi.js'
 import { runVite } from './runVite.js'
 
 export {
@@ -23,5 +24,6 @@ export {
   runRemix,
   runSolidStart,
   runSvelteKit,
+  runUmi,
   runVite,
 }

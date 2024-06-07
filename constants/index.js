@@ -46,6 +46,7 @@ framework/library:
   remix       : Create Remix project
   solidStart  : Create SolidStart project
   svelteKit   : Create SvelteKit project
+  umi         : Create UmiJS project
   vite        : Create Vite based project
 
 `

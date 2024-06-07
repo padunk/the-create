@@ -110,6 +110,9 @@ export async function cli(args) {
     case 'sveltekit':
       await runner.runSvelteKit(options)
       return
+    case 'umi':
+      await runner.runUmi(options)
+      return
     case 'vite':
     default:
       await runner.runVite(options)
