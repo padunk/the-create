@@ -1,3 +1,9 @@
+## 1.0.7 (20 June 2024)
+
+### Patch
+
+- Fix reactNative runner
+
 ## 1.0.6 (20 June 2024)
 
 ### Patch

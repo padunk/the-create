@@ -42,6 +42,7 @@ framework/library:
   nuxt        : Create Nuxt project
   preact      : Create Preact project
   qwik        : Create Qwik project
+  reactnative : Create ReactNative project
   redwood     : Create Redwood project
   remix       : Create Remix project
   solidStart  : Create SolidStart project

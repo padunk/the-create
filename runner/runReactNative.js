@@ -1,5 +1,6 @@
 'use strict'
 
+import { checkDirectoryName } from '../utils/index.js'
 import { execSync } from 'child_process'
 
 /**
@@ -8,6 +9,7 @@ import { execSync } from 'child_process'
  * @returns {Promise<void>}
  */
 export async function runReactNative(options) {
+  options = await checkDirectoryName(options)
   const command = `npx create-expo-app ${options.directoryName}`
 
   if (options.pm === 'bun') {
