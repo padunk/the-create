@@ -98,6 +98,9 @@ export async function cli(args) {
     case 'qwik':
       await runner.runQwik(options)
       return
+    case 'reactnative':
+      await runner.runReactNative(options)
+      return
     case 'redwood':
       await runner.runRedwood(options)
       return
@@ -116,7 +119,6 @@ export async function cli(args) {
     case 'vite':
     default:
       await runner.runVite(options)
-      return
   }
 
   return

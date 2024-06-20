@@ -1,3 +1,10 @@
+## 1.0.6 (20 June 2024)
+
+### Patch
+
+- Add ReactNative
+- Fix cli function return
+
 ## 1.0.5 (7 June 2024)
 
 ### Patch
