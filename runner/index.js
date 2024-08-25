@@ -9,9 +9,11 @@ import { runReactNative } from './runReactNative.js'
 import { runRedwood } from './runRedwood.js'
 import { runRemix } from './runRemix.js'
 import { runSolidStart } from './runSolidStart.js'
+import { runSuperkit } from './runSuperkit.js'
 import { runSvelteKit } from './runSvelteKit.js'
 import { runUmi } from './runUmi.js'
 import { runVite } from './runVite.js'
+import { runWaku } from './runWaku.js'
 
 export {
   runAnalog,
@@ -25,7 +27,9 @@ export {
   runRedwood,
   runRemix,
   runSolidStart,
+  runSuperkit,
   runSvelteKit,
   runUmi,
   runVite,
+  runWaku,
 }
