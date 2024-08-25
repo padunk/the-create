@@ -61,6 +61,7 @@ vim .
 - SvelteKit: `--fw=sveltekit`
 - Umi: `--fw=umi`
 - Vite: `--fw=vite`
+- Waku: `--fw=waku`
 
 ## Changelog
 

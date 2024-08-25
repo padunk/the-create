@@ -1,3 +1,11 @@
+## 1.0.8 (25 August 2024)
+
+### Patch
+
+- Fix runUmi jsdoc
+- refactor getVersion function
+- Add Waku
+
 ## 1.0.7 (20 June 2024)
 
 ### Patch

@@ -40,15 +40,18 @@ framework/library:
   million     : Integrate MillionLint to your project ${chalk.bgMagenta('<COMING SOON!>')}
   next        : Create Next project
   nuxt        : Create Nuxt project
+  phoenix     : Create Phoenix Liveview project ${chalk.bgMagenta('<COMING SOON!>')}
   preact      : Create Preact project
   qwik        : Create Qwik project
   reactnative : Create ReactNative project
   redwood     : Create Redwood project
   remix       : Create Remix project
   solidStart  : Create SolidStart project
+  superkit    : Create Superkit Golang project ${chalk.bgMagenta('<COMING SOON!>')}
   svelteKit   : Create SvelteKit project
   umi         : Create UmiJS project
   vite        : Create Vite based project
+  waku        : Create Waku based project
 
 `
 // [vite custom template]
@@ -95,6 +98,7 @@ export const FRAMEWORK = {
   '--redwood': 'redwood',
   '--remix': 'remix',
   '--solidStart': 'solidstart',
+  '--superkit': 'superkit',
   '--svelteKit': 'sveltekit',
   '--vite': 'vite',
 }
