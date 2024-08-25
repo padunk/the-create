@@ -4,7 +4,7 @@ import { execSync } from 'child_process'
 import { isNodeVersionGte } from '../utils/index.js'
 
 /**
- * Run RedwoodJS based project
+ * Run UmiJS based project
  * @param {Options} options
  * @returns {Promise<undefined | void>}
  */
