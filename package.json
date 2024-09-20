@@ -1,6 +1,6 @@
 {
   "name": "@rustyrush/the-create",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "One create to rule them all",
   "type": "module",
   "main": "index.js",

@@ -1,3 +1,9 @@
+## 1.0.9 (20 September 2024)
+
+### Patch
+
+- Fix import utils in runWaku
+
 ## 1.0.8 (25 August 2024)
 
 ### Patch
