@@ -1,7 +1,7 @@
 'use strict'
 
 import { execSync } from 'child_process'
-import { isNodeVersionGte } from '../utils'
+import { isNodeVersionGte } from '../utils/index.js'
 
 /**
  * Run RemixJS based project
