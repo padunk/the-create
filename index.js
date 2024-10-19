@@ -92,6 +92,12 @@ export async function cli(args) {
     case 'nuxt':
       await runner.runNuxt(options)
       return
+    case 'one':
+      await runner.runOne(options)
+      return
+    // case 'phoenix':
+    //   await runner.runPhoenix(options)
+    //   return
     case 'preact':
       await runner.runPreact(options)
       return

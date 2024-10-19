@@ -3,6 +3,8 @@ import { runAstro } from './runAstro.js'
 import { runEpic } from './runEpic.js'
 import { runNext } from './runNext.js'
 import { runNuxt } from './runNuxt.js'
+import { runOne } from './runOne.js'
+import { runPhoenix } from './runPhoenix.js'
 import { runPreact } from './runPreact.js'
 import { runQwik } from './runQwik.js'
 import { runReactNative } from './runReactNative.js'
@@ -21,6 +23,8 @@ export {
   runEpic,
   runNext,
   runNuxt,
+  runOne,
+  runPhoenix,
   runPreact,
   runQwik,
   runReactNative,
