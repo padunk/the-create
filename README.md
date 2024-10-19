@@ -52,6 +52,7 @@ vim .
 - Epic: `--fw=epic`
 - Next: `--fw=next`
 - Nuxt: `--fw=nuxt`
+- One: `--fw=one`
 - Preact: `--fw=preact`
 - Qwik: `--fw=qwik`
 - ReactNative: `--fw=reactnative`

@@ -40,6 +40,7 @@ framework/library:
   million     : Integrate MillionLint to your project ${chalk.bgMagenta('<COMING SOON!>')}
   next        : Create Next project
   nuxt        : Create Nuxt project
+  one         : Create OneStack project
   phoenix     : Create Phoenix Liveview project ${chalk.bgMagenta('<COMING SOON!>')}
   preact      : Create Preact project
   qwik        : Create Qwik project

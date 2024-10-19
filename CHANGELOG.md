@@ -1,3 +1,9 @@
+## 1.0.10 (19 October 2024)
+
+### Patch
+
+- Add One a new React Framework
+
 ## 1.0.9 (20 September 2024)
 
 ### Patch
