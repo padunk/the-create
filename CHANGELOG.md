@@ -1,3 +1,9 @@
+## 1.0.11 (22 February 2025)
+
+### Patch
+
+- Add a new React Tanning Template Framework
+
 ## 1.0.10 (19 October 2024)
 
 ### Patch

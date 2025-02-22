@@ -60,6 +60,7 @@ vim .
 - Remix: `--fw=remix`
 - SolidStart: `--fw=solidstart`
 - SvelteKit: `--fw=sveltekit`
+- React Tanning Template: `--fw=rts`
 - Umi: `--fw=umi`
 - Vite: `--fw=vite`
 - Waku: `--fw=waku`
