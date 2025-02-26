@@ -113,6 +113,9 @@ export async function cli(args) {
     case 'remix':
       await runner.runRemix(options)
       return
+    case 'rtn':
+      await runner.runRTN(options)
+      return
     case 'solidstart':
       await runner.runSolidStart(options)
       return
@@ -122,9 +125,6 @@ export async function cli(args) {
     case 'sveltekit':
       await runner.runSvelteKit(options)
       return
-    case 'rts':
-      await runner.runRTS(options)
-      return
     case 'umi':
       await runner.runUmi(options)
       return
@@ -132,8 +132,11 @@ export async function cli(args) {
       await runner.runWaku(options)
       return
     case 'vite':
-    default:
       await runner.runVite(options)
+      return
+    default:
+      console.log('Unknown Framework')
+      console.log(HELP_MANUAL)
   }
 
   return

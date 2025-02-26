@@ -13,14 +13,10 @@ async function checkOptions(options) {
  * @param {Options} options
  * @returns {Promise<undefined | void>}
  */
-export async function runRTS(opts) {
+export async function runRTN(opts) {
   const options = await checkOptions(opts)
 
   let command = `npx degit padunk/react-tanning ${options.directoryName}`
-
-  if (options.pm !== 'npm') {
-    command = `${options.pm} ${command}`
-  }
 
   execSync(command, { stdio: 'inherit' })
 }

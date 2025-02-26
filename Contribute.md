@@ -2,7 +2,7 @@
 
 If you want to add new framework or library, please follow these steps:
 
-1. Update `README.md`
+1. Add framework to `README.md` and `src/constants/index.js > HELP_MANUAL`
 2. Update `package.json` version, only update the patch version.
 3. Update `type.js`, update the typedef definition for Framework.
 4. Create new runner file based on the template inside `runner` folder.

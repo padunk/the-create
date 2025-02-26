@@ -19,20 +19,20 @@ export const ALIASES = {
 
 export const HELP_MANUAL = `
 usage: thecreate [-h | --help] [-v | --version] [<app name>] [-g | --git] 
-       [--package-manager=<package manager>] [--framework=<framework>] [--template=<template name>]
+       [--package-manager | --pm] [--framework | --fw] [--template=<template name>]
 
 example: ${chalk.bgBlack.yellowBright('thecreate --fw=vite')}
 
 general flag:
   git         : initialize git in your app ${chalk.bgMagenta('<COMING SOON!>')}
 
-package manager:
+Package manager:
   bun         : Run with bun
   npm         : Run with npm
   pnpm        : Run with pnpm
   yarn        : Run with yarn
 
-framework/library: 
+Framework/library:
 (make sure you have any global packages/cli)
   analog      : Create Analog project
   astro       : Create Astro project
@@ -47,6 +47,7 @@ framework/library:
   reactnative : Create ReactNative project
   redwood     : Create Redwood project
   remix       : Create Remix project
+  rtn         : Create React Tanning project
   solidStart  : Create SolidStart project
   superkit    : Create Superkit Golang project ${chalk.bgMagenta('<COMING SOON!>')}
   svelteKit   : Create SvelteKit project
@@ -55,8 +56,6 @@ framework/library:
   waku        : Create Waku based project
 
 `
-// [vite custom template]
-// tanning   : create React Tanning project
 
 export const PACKAGE_MANAGER = {
   '--bun': 'bun',

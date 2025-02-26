@@ -7,7 +7,7 @@ import { runOne } from './runOne.js'
 import { runPhoenix } from './runPhoenix.js'
 import { runPreact } from './runPreact.js'
 import { runQwik } from './runQwik.js'
-import { runRTS } from './runRTS.js'
+import { runRTN } from './runRTN.js'
 import { runReactNative } from './runReactNative.js'
 import { runRedwood } from './runRedwood.js'
 import { runRemix } from './runRemix.js'
@@ -34,7 +34,7 @@ export {
   runSolidStart,
   runSuperkit,
   runSvelteKit,
-  runRTS,
+  runRTN,
   runUmi,
   runVite,
   runWaku,

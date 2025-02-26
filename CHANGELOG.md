@@ -1,3 +1,10 @@
+## 1.0.12 (26 February 2025)
+
+### Patch
+
+- Fix runner default
+- Change React Tanning name from RTS to RTN
+
 ## 1.0.11 (22 February 2025)
 
 ### Patch
