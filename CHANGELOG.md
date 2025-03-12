@@ -1,3 +1,10 @@
+## 1.0.13 (12 March 2025)
+
+### Patch
+
+- Add LynxJS
+- Update Contribute.md
+
 ## 1.0.12 (26 February 2025)
 
 ### Patch
