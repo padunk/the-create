@@ -86,6 +86,9 @@ export async function cli(args) {
     case 'epic':
       await runner.runEpic(options)
       return
+    case 'lynx':
+      await runner.runLynx(options)
+      return
     case 'next':
       await runner.runNext(options)
       return

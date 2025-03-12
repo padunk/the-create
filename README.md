@@ -50,6 +50,7 @@ vim .
 - Analog: `--fw=analog`
 - Astro: `--fw=astro`
 - Epic: `--fw=epic`
+- Lynx: `--fw=lynx`
 - Next: `--fw=next`
 - Nuxt: `--fw=nuxt`
 - One: `--fw=one`

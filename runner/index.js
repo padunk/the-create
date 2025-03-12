@@ -1,6 +1,7 @@
 import { runAnalog } from './runAnalog.js'
 import { runAstro } from './runAstro.js'
 import { runEpic } from './runEpic.js'
+import { runLynx } from './runLynx.js'
 import { runNext } from './runNext.js'
 import { runNuxt } from './runNuxt.js'
 import { runOne } from './runOne.js'
@@ -22,6 +23,7 @@ export {
   runAnalog,
   runAstro,
   runEpic,
+  runLynx,
   runNext,
   runNuxt,
   runOne,

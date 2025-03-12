@@ -37,6 +37,7 @@ Framework/library:
   analog      : Create Analog project
   astro       : Create Astro project
   epicStack   : Create EpicStack project
+  lynx        : Create LynxJS project
   million     : Integrate MillionLint to your project ${chalk.bgMagenta('<COMING SOON!>')}
   next        : Create Next project
   nuxt        : Create Nuxt project
