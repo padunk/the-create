@@ -5,6 +5,7 @@ import { runLynx } from './runLynx.js'
 import { runNext } from './runNext.js'
 import { runNuxt } from './runNuxt.js'
 import { runOne } from './runOne.js'
+import { runParcel } from './runParcel.js'
 import { runPhoenix } from './runPhoenix.js'
 import { runPreact } from './runPreact.js'
 import { runQwik } from './runQwik.js'
@@ -27,6 +28,7 @@ export {
   runNext,
   runNuxt,
   runOne,
+  runParcel,
   runPhoenix,
   runPreact,
   runQwik,

@@ -54,6 +54,7 @@ vim .
 - Next: `--fw=next`
 - Nuxt: `--fw=nuxt`
 - One: `--fw=one`
+- Parcel: `--fw=parcel`
 - Preact: `--fw=preact`
 - Qwik: `--fw=qwik`
 - ReactNative: `--fw=reactnative`

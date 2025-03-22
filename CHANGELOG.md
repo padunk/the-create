@@ -1,3 +1,10 @@
+## 1.0.14 (22 March 2025)
+
+### Patch
+
+- Add Parcel
+- Update default template variable name
+
 ## 1.0.13 (12 March 2025)
 
 ### Patch

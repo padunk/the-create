@@ -1,6 +1,6 @@
 'use strict'
 
-import { DEFAULT_VITE_TEMPLATE, VITE_TEMPLATES } from '../constants/index.js'
+import { DEFAULT_TEMPLATE, VITE_TEMPLATES } from '../constants/index.js'
 import { checkDirectoryName, checkTemplate } from '../utils/index.js'
 
 import { execa } from 'execa'
@@ -12,7 +12,7 @@ import { execa } from 'execa'
  */
 async function checkViteOptions(options) {
   options = await checkDirectoryName(options)
-  options = await checkTemplate(options, VITE_TEMPLATES, DEFAULT_VITE_TEMPLATE)
+  options = await checkTemplate(options, VITE_TEMPLATES, DEFAULT_TEMPLATE)
 
   return options
 }

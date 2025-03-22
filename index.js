@@ -98,6 +98,9 @@ export async function cli(args) {
     case 'one':
       await runner.runOne(options)
       return
+    case 'parcel':
+      await runner.runParcel(options)
+      return
     // case 'phoenix':
     //   await runner.runPhoenix(options)
     //   return
@@ -138,7 +141,7 @@ export async function cli(args) {
       await runner.runVite(options)
       return
     default:
-      console.log('Unknown Framework')
+      console.log(chalk.red('Unknown Framework'))
       console.log(HELP_MANUAL)
   }
 

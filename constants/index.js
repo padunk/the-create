@@ -84,7 +84,9 @@ export const VITE_TEMPLATES = [
   'qwik-ts',
 ]
 
-export const DEFAULT_VITE_TEMPLATE = 'vanilla'
+export const PARCEL_TEMPLATES = ['vanilla', 'react-client', 'react-server', 'react-static']
+
+export const DEFAULT_TEMPLATE = 'vanilla'
 export const DEFAULT_APP_NAME = 'my-app'
 
 export const FRAMEWORK = {

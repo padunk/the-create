@@ -11,7 +11,7 @@
  */
 
 /**
- * @typedef {'analog' | 'astro' | 'epic'  | 'lynx' | 'million' | 'next' | 'nuxt' | 'one' | 'phoenix' |  'preact' | 'qwik' | 'reactnative' | 'redwood' | 'remix' | 'solidstart' | 'superkit' | 'sveltekit' | 'rts' | 'umi' | 'vite' | 'waku' } Framework
+ * @typedef {'analog' | 'astro' | 'epic'  | 'lynx' | 'million' | 'next' | 'nuxt' | 'one' | 'parcel' | 'phoenix' |  'preact' | 'qwik' | 'reactnative' | 'redwood' | 'remix' | 'solidstart' | 'superkit' | 'sveltekit' | 'rts' | 'umi' | 'vite' | 'waku' } Framework
  */
 
 /**
